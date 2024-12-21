@@ -1,0 +1,77 @@
+body{
+  background-image: linear-gradient(to bottom right, #E1BEE7, #B2EBF2);
+  height: 100vh;
+  color: #000;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+/* 페이지 이름 */
+.title{
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: -10px;
+  font-size: 35px;
+}
+.title-sub{
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 100px;
+}
+/* 로그인/회원가입*/
+.signIn-container{
+  align-items: center;
+  width: 25%;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.singIn-input{
+  margin-top: 50px;
+}
+.signIn-button{
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  /* moz-transition: all .4s ease-in-out; */
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.signIn-button:hover{
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+label{
+  font-size: 20px;
+  font-weight: bold;
+}
+input{
+  height: 1.4rem;
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
