@@ -1,13 +1,16 @@
 body{
   background-image: linear-gradient(to bottom right, #E1BEE7, #B2EBF2);
-  height: 100vh;
+  background-size: 100% 100%; /* 배경 크기를 전체로 맞춤 */
+  background-repeat: no-repeat; /* 배경 반복 방지 */
+
+  height: 100vh; /* 화면 높이 전체 */
+  width: 100vw; /* 화면 너비 전체 */
   color: #000;
 }
 .main{
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 /* 페이지 이름 */
 .title{
@@ -22,6 +25,17 @@ body{
   font-weight: bold;
   margin-bottom: 100px;
 }
+/* 상단바 */
+.navbar{
+  width: 100%;
+  background: white;
+  padding: 20px;
+  margin: -10px;
+}
+.navbar a{
+  margin-right: 10px;
+  text-decoration: none;
+}
 /* 로그인/회원가입*/
 .signIn-container{
   align-items: center;
@@ -33,9 +47,7 @@ body{
   box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
-.singIn-input{
-  margin-top: 50px;
-}
+
 .signIn-button{
   background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
@@ -49,7 +61,6 @@ body{
   text-align:center;
   border: none;
   background-size: 300% 100%;
-
   border-radius: 50px;
   /* moz-transition: all .4s ease-in-out; */
   -o-transition: all .4s ease-in-out;
@@ -63,6 +74,7 @@ body{
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
+/* 아이디 비밀번호 입력 */
 label{
   font-size: 20px;
   font-weight: bold;
@@ -71,7 +83,40 @@ input{
   height: 1.4rem;
   background-color: #eee;
   border: none;
+  border-radius: 5px;
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+}
+.singIn-input{
+  margin-top: 50px;
+}
+.id-input{
+  margin-bottom: 20px;
+}
+.pwd-input{
+  margin-bottom: 20px;
+}
+.idMessage{
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  color: rgb(134, 142, 150);
+  font-size: 0.875rem;
+  text-decoration: none;
+  line-height: 2.0;
+  text-underline-position: under;
+  margin-top: -10px;
+}
+
+/* List */
+.items-container{
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 100px;
+}
+.items{
+  width: 30%;
+  height: 30vh;
+  text-align: center;
+  flex-grow: 1;
 }

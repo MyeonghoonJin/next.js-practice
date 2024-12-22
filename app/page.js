@@ -1,9 +1,11 @@
-import './globals.css';
+import Link from 'next/link';
 
 export default function Home() {
 
   let name = "명훈"
-  const handleSubmit = {}
+  const handleSubmit = () => {
+    
+  }
 
   return (
     //return 안에는 반드시 하나의 태그로 시작해서 하나의 태그로 끝나야함.병렬적으로 태그 불가
@@ -16,17 +18,21 @@ export default function Home() {
           <div className='id-input'>
             <label>아이디</label><br></br>
             <input type='text' placeholder='아이디'></input>
-          </div><br></br>
+            <div className='idMessage'>6자이상 16자 이하</div>
+          </div>
           <div className='pwd-input'>
             <label>비밀번호</label><br></br>
             <input type='password' placeholder='비밀번호'></input>
-          </div><a class="outer-link pull-left" href="#/forgot">아이디/비밀번호 찾기</a><br></br>
+          </div>
+          <a class="outer-link pull-left" href="#/forgot" style={{marginRight : 15}}>아이디/비밀번호 찾기</a>
+          <a class="outer-link pull-left" href="#/signUp">회원가입</a>
+          <br></br>
+        </div>
           <button 
             className='signIn-button'
-            onClick={handleSubmit}
+            onClick={handleSubmit()}
           >로그인
           </button>
-        </div>
       </div>
     </div>
   );
