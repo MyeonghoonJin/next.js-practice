@@ -1,6 +1,6 @@
 body{
   background-image: linear-gradient(to bottom right, #E1BEE7, #B2EBF2);
-  background-size: 100% 100%; /* 배경 크기를 전체로 맞춤 */
+  background-size: 100% 150%; /* 배경 크기를 전체로 맞춤 */
   background-repeat: no-repeat; /* 배경 반복 방지 */
 
   height: 100vh; /* 화면 높이 전체 */
@@ -110,13 +110,33 @@ input{
 
 /* List */
 .items-container{
+  width: 60%;
+  margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   margin-top: 100px;
+  justify-content:space-between;
 }
 .items{
   width: 30%;
-  height: 30vh;
+  height: auto;
   text-align: center;
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  margin-bottom: 100px;
+}
+.image{
+  width: 70%;
+  height: 90%; 
+}
+
+/* Cart */
+.cart-item {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  line-height: 0px;
+}
+.detailButton{
+  text-decoration: none;
 }
