@@ -1,21 +1,24 @@
-import Data from "./data";
+import Data from "./data.js";
 import "./cart.module.css";
 import Link from "next/link";
 import { handleClientScriptLoad } from "next/script";
 export default function Cart() {
 
-    let a = [1,2]
+    let a = ["템1","템2"]
     return (
       <div>
         <h4 className="title">Cart</h4>
-        {a.map( (a,i) => {
+        {a.map( (item,i) => {
             return(
-                <CartItem key={i}/>
+                <CartItem items={item}/>
             )
         })}
+        <RedButton color = "blue"/>
       </div>
     )
   }
+
+
 
 // 컴포넌트 :              코드 재사용, 코드 축약
 // 컴포넌트 이용 :         1. function생성    2.원하는 태그 입력   3. 다른 function 내에서 사용
@@ -28,14 +31,19 @@ export default function Cart() {
 // 따라서 자바스크립트 기능이 필요한 컴포넌트만 클라이언트 컴포넌트로 만들어서 사용!!
 
 // 클라이언트 컴포넌트 이용 : 최상단(다른곳x)에 'use client' 입력 후 하단에 function(컴포넌트) 작성
-function CartItem(){
+
+// props문법
+// 부모 컴포넌트에서 자식 컴포넌트로 데이터를 전달 시 '변수명 = "데이터"' 형태로 속성처럼 작성
+// 자식 컴포넌트 정의에 매개변수로 props
+// 자식 컴포넌트에서 쓸 데이터 => 'props.변수명'
+function CartItem(props){
 
     // handleDetailButton = () =>{
         
     // }
     return(
         <div className="cart-item">
-            <p>상품명</p>
+            <p>{props.items}</p>
             <p>$40</p>
             <p>10개</p>
             <Link href = "/details">
@@ -43,4 +51,8 @@ function CartItem(){
             </Link>
         </div>
     );
+}
+
+function RedButton(props){
+  return <button style={{background:props.color}}>RedButton</button>
 }
